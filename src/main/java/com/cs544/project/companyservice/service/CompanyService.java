@@ -17,8 +17,8 @@ public class CompanyService {
         return companyDao.save(company);
     }
 
-    public Company getByCompanyId(Long id) {
-        return companyDao.getByCompanyId(id);
+    public Company getCompanyByCompanyId(Long id) {
+        return companyDao.getCompanyByCompanyId(id);
     }
 
     public void update(Company company) {

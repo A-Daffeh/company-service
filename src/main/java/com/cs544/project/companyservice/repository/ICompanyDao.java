@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface ICompanyDao extends JpaRepository<Company, Long> {
-    Company getByCompanyId(Long id);
+    Company getCompanyByCompanyId(Long id);
+
 
 }
