@@ -18,7 +18,7 @@ public class CompanyService {
     }
 
     public Company getByCompanyId(Long id) {
-        return companyDao.getByCompanyId(id);
+        return companyDao.findById(id).orElse(null);
     }
 
     public void update(Company company) {

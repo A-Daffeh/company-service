@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -17,8 +14,10 @@ public class Company {
     @Id
     @GeneratedValue
     private Long companyId;
+    @Column(nullable = false) // I added this, for one reason the database was adding null values.
     private String companyName;
     @Lob
+    @Column(nullable = false)
     private String companyAddress;
 
 

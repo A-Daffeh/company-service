@@ -5,8 +5,6 @@ import com.cs544.project.companyservice.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/companies")
 public class CompanyController {
@@ -18,14 +16,10 @@ public class CompanyController {
         return companyService.getByCompanyId(id);
     }
 
-
-
     @PostMapping(value = "/add", consumes = "application/json")
     public Company addCompany(@RequestBody Company company) {
        return companyService.addCompany(company);
     }
-
-
 
     @PutMapping(value = "/{id}", consumes = "application/json")
     public Company updateCompany(@PathVariable Long id, @RequestBody Company company) {
