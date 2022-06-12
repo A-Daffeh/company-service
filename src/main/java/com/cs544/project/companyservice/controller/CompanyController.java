@@ -12,8 +12,8 @@ public class CompanyController {
     private CompanyService companyService;
 
     @GetMapping(value = "/{id}", produces = "application/json")
-    public Company getCompany(@PathVariable Long id) {
-        return companyService.getByCompanyId(id);
+    public Company getCompanyByCompanyId(@PathVariable Long id) {
+        return companyService.getCompanyByCompanyId(id);
     }
 
     @PostMapping(value = "/add", consumes = "application/json")
